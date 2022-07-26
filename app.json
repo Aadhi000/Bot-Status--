@@ -38,6 +38,11 @@
       "description": "list of bot usernames example- botone bottwo ",
       "value": "",
       "required": false
+    },
+    "names": {
+      "description": "list of bot name example- botone bottwo ",
+      "value": "",
+      "required": false
     }
   },
   "addons": [
