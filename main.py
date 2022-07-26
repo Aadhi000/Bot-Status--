@@ -24,7 +24,7 @@ def main():
             for bot in bots:
                 print(f"[INFO] checking @{bot}")
                 snt = user_client.send_message(bot, '/start')
-                for name in names:
+            
                 time.sleep(15)
             
                 msg = user_client.get_history(bot, 1)[0]
@@ -37,7 +37,7 @@ def main():
                     print(f"[INFO] all good with @{bot}")
                     edit_text += f"๏ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 - <b><a href=https://t.me/{bot}>{name}</a> › 💠</b>\n\n"
                 user_client.read_history(bot)
-
+            for name in names:
             time_now = datetime.datetime.now(pytz.timezone('Asia/Kolkata'))
             formatted_time = time_now.strftime("%d %B %Y %I:%M %p")
 
