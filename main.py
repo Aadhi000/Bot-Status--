@@ -21,8 +21,10 @@ def main():
             print("[INFO] starting to check uptime..")
             edit_text = f"🚥 𝗕𝗼𝘁 𝗦𝘁𝗮𝘁𝘂𝘀 𝗟𝗶𝘃𝗲 🚥\n\n<b>__ʀᴇɢᴜʟᴀʀ ᴄʜᴇᴄᴋ ᴏɴ ᴇᴀᴄʜ ᴏɴᴇ ʜᴏᴜʀs -__</b>\n\n"            
             
-            for bot in bots:
-                name in names
+            for bot in bots 
+                name in names:
+            
+                
                 print(f"[INFO] checking @{bot}")
                 snt = user_client.send_message(bot, '/start')
             
@@ -39,6 +41,8 @@ def main():
                     edit_text += f"๏ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 - <b><a href=https://t.me/{bot}>{name}</a> › 💠</b>\n\n"
                 user_client.read_history(bot)
             
+           
+
             time_now = datetime.datetime.now(pytz.timezone('Asia/Kolkata'))
             formatted_time = time_now.strftime("%d %B %Y %I:%M %p")
 
