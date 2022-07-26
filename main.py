@@ -31,15 +31,15 @@ def main():
                 time.sleep(15)
             
                 msg = user_client.get_history(bot, 1)[0]
-            for name in names:    
+                
                 if snt.message_id == msg.message_id:
                     print(f"[WARNING] @{bot} is down")
-                    edit_text += f"๏ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 - <b><a href=https://t.me/{bot}>{name}</a> › 🚫</b>\n\n"
+                    edit_text += f"๏ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 - <b><a href=https://t.me/{bot}>{bot}</a> › 🚫</b>\n\n"
                     #user_client.send_message("me",
                                              #f"@{bot} was down")
                 else:
                     print(f"[INFO] all good with @{bot}")
-                    edit_text += f"๏ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 - <b><a href=https://t.me/{bot}>{name}</a> › 💠</b>\n\n"
+                    edit_text += f"๏ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 - <b><a href=https://t.me/{bot}>{bot}</a> › 💠</b>\n\n"
                 user_client.read_history(bot)
             
            
