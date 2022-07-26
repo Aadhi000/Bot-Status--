@@ -20,11 +20,11 @@ def main():
         while True:
             print("[INFO] starting to check uptime..")
             edit_text = f"🚥 𝗕𝗼𝘁 𝗦𝘁𝗮𝘁𝘂𝘀 𝗟𝗶𝘃𝗲 🚥\n\n<b>__ʀᴇɢᴜʟᴀʀ ᴄʜᴇᴄᴋ ᴏɴ ᴇᴀᴄʜ ᴏɴᴇ ʜᴏᴜʀs -__</b>\n\n"            
-            for name in names:
+            
             for bot in bots:
                 print(f"[INFO] checking @{bot}")
                 snt = user_client.send_message(bot, '/start')
-
+                for name in names:
                 time.sleep(15)
             
                 msg = user_client.get_history(bot, 1)[0]
