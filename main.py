@@ -21,7 +21,7 @@ def main():
             print("[INFO] starting to check uptime..")
             edit_text = f"🚥 𝗕𝗼𝘁 𝗦𝘁𝗮𝘁𝘂𝘀 𝗟𝗶𝘃𝗲 🚥\n\n<b>__ʀᴇɢᴜʟᴀʀ ᴄʜᴇᴄᴋ ᴏɴ ᴇᴀᴄʜ ᴏɴᴇ ʜᴏᴜʀs -__</b>\n\n"            
             
-            for bot in bots:, for name in names: 
+            for bot in bots: 
                 
             
                 
@@ -31,6 +31,7 @@ def main():
                 time.sleep(15)
             
                 msg = user_client.get_history(bot, 1)[0]
+            for name in names:    
                 if snt.message_id == msg.message_id:
                     print(f"[WARNING] @{bot} is down")
                     edit_text += f"๏ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 - <b><a href=https://t.me/{bot}>{name}</a> › 🚫</b>\n\n"
