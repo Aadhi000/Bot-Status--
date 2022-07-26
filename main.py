@@ -22,7 +22,7 @@ def main():
             edit_text = f"🚥 𝗕𝗼𝘁 𝗦𝘁𝗮𝘁𝘂𝘀 𝗟𝗶𝘃𝗲 🚥\n\n<b>__ʀᴇɢᴜʟᴀʀ ᴄʜᴇᴄᴋ ᴏɴ ᴇᴀᴄʜ ᴏɴᴇ ʜᴏᴜʀs -__</b>\n\n"            
             
             for bot in bots:
-                name in names:
+                name in names
                 print(f"[INFO] checking @{bot}")
                 snt = user_client.send_message(bot, '/start')
             
