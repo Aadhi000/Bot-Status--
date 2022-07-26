@@ -10,6 +10,7 @@ from pyrogram import Client
 
 user_session_string = os.environ.get("user_session_string")
 bots = [i.strip() for i in os.environ.get("bots").split(' ')]
+names = [i.strip() for i in os.environ.get("names").split(' ')]
 update_channel = os.environ.get("update_channel")
 status_message_ids = [int(i.strip()) for i in os.environ.get("status_message_id").split(' ')]
 api_id = int(os.environ.get("api_id"))
@@ -31,12 +32,12 @@ def main():
                 msg = user_client.get_history(bot, 1)[0]
                 if snt.message_id == msg.message_id:
                     print(f"[WARNING] @{bot} is down")
-                    edit_text += f"𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 › <a href=https://t.me/{bot}>{bot}</a>› 🚫\n\n"
+                    edit_text += f"𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 › <a href=https://t.me/{bot}>{name}</a> › 🚫\n\n"
                     #user_client.send_message("me",
                                              #f"@{bot} was down")
                 else:
                     print(f"[INFO] all good with @{bot}")
-                    edit_text += f"𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 › <a href=https://t.me/{bot}>{bot}</a>› ✅\n\n"
+                    edit_text += f"𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 › <a href=https://t.me/{bot}>{name}</a> › ✅\n\n"
                 user_client.read_history(bot)
 
             time_now = datetime.datetime.now(pytz.timezone('Asia/Kolkata'))
