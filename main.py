@@ -29,12 +29,12 @@ def main():
                 msg = user_client.get_history(bot, 1)[0]
                 if snt.message_id == msg.message_id:
                     print(f"[WARNING] @{bot} is down")
-                    edit_text += f"𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 › <a href=https://t.me/{bot}>{name}</a> › 🚫\n\n"
+                    edit_text += f"𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 - <a href=https://t.me/{bot}>{name}</a> › 🚫\n\n"
                     #user_client.send_message("me",
                                              #f"@{bot} was down")
                 else:
                     print(f"[INFO] all good with @{bot}")
-                    edit_text += f"𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 › <a href=https://t.me/{bot}>{name}</a> › ✅\n\n"
+                    edit_text += f"𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 - <a href=https://t.me/{bot}>{name}</a> › ✅\n\n"
                 user_client.read_history(bot)
 
             time_now = datetime.datetime.now(pytz.timezone('Asia/Kolkata'))
@@ -46,9 +46,9 @@ def main():
                 user_client.edit_message_text(int(update_channel), status_message_id,
                                          edit_text)
                 time.sleep(5)
-            print(f"[INFO] everything done! sleeping for 3 hours...")
+            print(f"[INFO] everything done! sleeping for 1 hours...")
 
-            time.sleep(120)
+            time.sleep(3600)
 
 
 if __name__ == "__main__":
