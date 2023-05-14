@@ -1,9 +1,15 @@
 FROM python:3.10
 
-WORKDIR /app
+FROM python:3.10.8-slim-buster
 
-COPY . /app/
+RUN apt update && apt upgrade -y
+RUN apt install git -y
+COPY requirements.txt /requirements.txt
 
-RUN pip install -r requirements.txt
+RUN cd /
+RUN pip3 install -U pip && pip3 install -U -r requirements.txt
+WORKDIR /Bot-Status--
 
-CMD ["python", "bot.py"]
+COPY . .
+
+CMD ["python3", "bot.py"]
