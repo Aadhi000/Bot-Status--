@@ -1,6 +1,6 @@
 FROM python:3.10
 
-FROM python:3.10.8-slim-buster
+
 
 RUN apt update && apt upgrade -y
 RUN apt install git -y
@@ -12,4 +12,4 @@ WORKDIR /Bot-Status--
 
 COPY . .
 
-CMD ["python3", "bot.py"]
+CMD ["python3", "main.py"]
